@@ -47,7 +47,7 @@ CREATE TABLE `attachment` (
   `status` tinyint(1) unsigned DEFAULT '1' COMMENT '0 失效 待删除\n1 有效',
   `upload_time` bigint(13) unsigned NOT NULL,
   PRIMARY KEY (`aid`)
-) ENGINE=InnoDB AUTO_INCREMENT=141 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=146 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -218,7 +218,7 @@ CREATE TABLE `message` (
   PRIMARY KEY (`mid`),
   KEY `owner_index` (`owner`),
   KEY `create_time_index` (`create_time`)
-) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -253,7 +253,7 @@ CREATE TABLE `problem` (
   KEY `difficult` (`difficult`),
   KEY `status` (`status`),
   KEY `owner` (`owner`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -325,7 +325,7 @@ CREATE TABLE `submission` (
   KEY `CID_INDEX` (`cid`),
   KEY `STATUS_INDEX` (`status`),
   KEY `SUBMIT_TIME_INDEX` (`submit_time`)
-) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -355,7 +355,7 @@ CREATE TABLE `tags` (
   `used` int(10) unsigned DEFAULT '0',
   PRIMARY KEY (`tid`),
   UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -368,12 +368,12 @@ DROP TABLE IF EXISTS `test_cases`;
 CREATE TABLE `test_cases` (
   `tid` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pid` int(10) unsigned NOT NULL,
-  `stdin` varchar(1000) NOT NULL,
-  `stdout` varchar(1000) NOT NULL,
+  `stdin` mediumtext NOT NULL,
+  `stdout` mediumtext NOT NULL,
   `strength` tinyint(1) unsigned NOT NULL COMMENT '介于1-9之间',
   `create_time` bigint(13) unsigned NOT NULL,
   PRIMARY KEY (`tid`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -437,4 +437,4 @@ CREATE TABLE `user_log` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-24 13:15:42
+-- Dump completed on 2018-03-02  0:41:10
