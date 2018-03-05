@@ -253,7 +253,7 @@ CREATE TABLE `problem` (
   KEY `difficult` (`difficult`),
   KEY `status` (`status`),
   KEY `owner` (`owner`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -437,4 +437,4 @@ CREATE TABLE `user_log` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-02  0:41:10
+-- Dump completed on 2018-03-05 19:20:54
